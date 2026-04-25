@@ -1,0 +1,45 @@
+[
+  {
+    "station_id": "station-1",
+    "indicatorRanges": {
+      "temperature": {
+        "normal": { "min": 10, "max": 35 },
+        "critical": { "min": 5, "max": 40 }
+      },
+      "humidity": {
+        "normal": { "min": 30, "max": 75 },
+        "critical": { "min": 20, "max": 85 }
+      },
+      "ph": {
+        "normal": { "min": 6.5, "max": 8.5 },
+        "critical": { "min": 6, "max": 9 }
+      }
+    },
+    "readings": [
+      {
+        "timestamp": "2026-04-24T18:00:00Z",
+        "indicators": {
+          "temperature": 28,
+          "humidity": 54,
+          "ph": 7.2
+        }
+      },
+      {
+        "timestamp": "2026-04-25T08:30:00Z",
+        "indicators": {
+          "temperature": 31,
+          "humidity": 72,
+          "ph": 8.2
+        }
+      },
+      {
+        "timestamp": "2026-04-25T15:15:00Z",
+        "indicators": {
+          "temperature": 37,
+          "humidity": 81,
+          "ph": 8.7
+        }
+      }
+    ]
+  }
+]
