@@ -11,3 +11,30 @@ I'm the GitHub Learning Lab bot and I'm here to help guide you in your journey t
 I'll meet you over there, can't wait to get started!
 
 This course is using the :sparkles: open source project [reveal.js](https://github.com/hakimel/reveal.js/). In some cases we’ve made changes to the history so it would behave during class, so head to the original project repo to learn more about the cool people behind this project.
+
+## API de relatório diário
+
+Foi adicionado um endpoint HTTP para consolidar as leituras das últimas 24h por estação.
+
+### Executar
+
+```bash
+node api/server.js
+```
+
+### Endpoint
+
+`GET /daily-report/{station_id}`
+
+Exemplo:
+
+```bash
+curl http://localhost:3000/daily-report/station-1
+```
+
+Resposta:
+- `readings_count`: quantidade de leituras
+- `indicators`: média, mínima e máxima por indicador
+- `last_reading`: última leitura registrada
+- `overall_status`: `normal`, `atenção` ou `crítico`
+- `indicators_out_of_range`: lista de indicadores fora da faixa normal na última leitura
